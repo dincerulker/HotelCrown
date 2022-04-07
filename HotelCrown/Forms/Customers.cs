@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelCrown
+namespace HotelCrown.Forms
 {
-    public partial class Form1 : Form
+    public partial class Customers : Form
     {
-        public Form1()
+        public Customers()
         {
             InitializeComponent();
         }
