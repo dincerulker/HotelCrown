@@ -12,7 +12,7 @@ namespace HotelCrown.Strategies
     {
         protected override void Seed(HotelCrownContext context)
         {
-            List<Feature> features;
+            
 
             if (!context.Services.Any())
             {
@@ -63,6 +63,7 @@ namespace HotelCrown.Strategies
                 foreach (Service item in services)
                     context.Services.Add(item);
             }
+            List<Feature> features;
 
             if (!context.Rooms.Any())
             {
