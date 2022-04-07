@@ -98,7 +98,7 @@
                    {
                        RoomName = "Standart",
                        Capacity = 2,
-                       Features = features.Where(x=>x.Id < 11).ToList(),
+                       Features = features.Where(x=>x.Id < 11).ToList(),                       
 
                    },
                    new Room()

@@ -27,6 +27,8 @@ namespace HotelCrown.Forms
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
             gboNewRoom.Enabled = true;
+            btnAdd.Enabled = true;
+            btnCancel.Enabled = true;
         }
 
         private void OzellikleriYukle()
@@ -44,6 +46,54 @@ namespace HotelCrown.Forms
                 Price = x.Price,
 
             }).ToList();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            gboNewRoom.Enabled = false;
+            btnAdd.Enabled = false;
+            btnCancel.Enabled = false;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            foreach (Feature item in lstRoomFeatures.SelectedItems)
+            {
+                features.Add(item);
+            }
+
+            if (txtRoomName.Text == "")
+            {
+                MessageBox.Show("Please enter room name!");
+            }
+            else if (lstRoomFeatures.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a feature at least!");
+            }
+            else
+            {
+                Room newRoom = new Room()
+                {
+                    Id = (int)nudRoomNo.Value,
+                    RoomName = txtRoomName.Text.Trim(),
+                    Capacity = (int)nudCapacity.Value,
+                    Price = (decimal)nudNightlyRate.Value,
+                    Features = features,
+                };
+                db.Rooms.Add(newRoom);
+                db.SaveChanges();
+                FormuSifila();
+                OdalarıGetir();
+
+            }
+        }
+
+        private void FormuSifila()
+        {
+            nudRoomNo.Value = 1;
+            txtRoomName.Text = "Standart";
+            nudCapacity.Value = 1;
+            nudNightlyRate.Value = 100;
         }
     }
 }

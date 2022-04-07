@@ -46,6 +46,10 @@
             this.lstRoomFeatures = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddRoom = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.gboNewRoom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
@@ -104,12 +108,14 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Enabled = false;
             this.btnCancel.Location = new System.Drawing.Point(820, 503);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(115, 41);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dgvRooms
             // 
@@ -118,11 +124,17 @@
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRooms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvRooms.Location = new System.Drawing.Point(6, 26);
             this.dgvRooms.MultiSelect = false;
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
             this.dgvRooms.RowHeadersVisible = false;
+            this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRooms.Size = new System.Drawing.Size(598, 452);
             this.dgvRooms.TabIndex = 0;
             // 
@@ -139,12 +151,14 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Enabled = false;
             this.btnAdd.Location = new System.Drawing.Point(699, 503);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(115, 41);
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label2
             // 
@@ -220,6 +234,11 @@
             // 
             this.nudNightlyRate.Location = new System.Drawing.Point(147, 138);
             this.nudNightlyRate.Margin = new System.Windows.Forms.Padding(10);
+            this.nudNightlyRate.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.nudNightlyRate.Name = "nudNightlyRate";
             this.nudNightlyRate.Size = new System.Drawing.Size(145, 27);
             this.nudNightlyRate.TabIndex = 1;
@@ -232,10 +251,12 @@
             // 
             // lstRoomFeatures
             // 
+            this.lstRoomFeatures.DisplayMember = "FeatureName";
             this.lstRoomFeatures.FormattingEnabled = true;
             this.lstRoomFeatures.ItemHeight = 18;
             this.lstRoomFeatures.Location = new System.Drawing.Point(17, 222);
             this.lstRoomFeatures.Name = "lstRoomFeatures";
+            this.lstRoomFeatures.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lstRoomFeatures.Size = new System.Drawing.Size(275, 238);
             this.lstRoomFeatures.TabIndex = 3;
             // 
@@ -258,6 +279,37 @@
             this.btnAddRoom.UseVisualStyleBackColor = true;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "RoomId";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "RoomName";
+            this.Column2.FillWeight = 170F;
+            this.Column2.HeaderText = "Room Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Capacity";
+            this.Column3.FillWeight = 70F;
+            this.Column3.HeaderText = "Capacity";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Price";
+            this.Column4.HeaderText = "Price";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // Rooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -274,6 +326,7 @@
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "Rooms";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Rooms";
             this.groupBox1.ResumeLayout(false);
             this.gboNewRoom.ResumeLayout(false);
@@ -306,5 +359,9 @@
         private System.Windows.Forms.NumericUpDown nudCapacity;
         private System.Windows.Forms.NumericUpDown nudRoomNo;
         private System.Windows.Forms.Button btnAddRoom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

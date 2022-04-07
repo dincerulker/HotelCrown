@@ -176,6 +176,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Crown";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).EndInit();
             this.menuStrip1.ResumeLayout(false);
