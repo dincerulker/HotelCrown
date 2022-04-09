@@ -142,6 +142,7 @@
             this.tsmFeatures.Name = "tsmFeatures";
             this.tsmFeatures.Size = new System.Drawing.Size(91, 22);
             this.tsmFeatures.Text = "Features";
+            this.tsmFeatures.Click += new System.EventHandler(this.tsmFeatures_Click);
             // 
             // tsmServices
             // 

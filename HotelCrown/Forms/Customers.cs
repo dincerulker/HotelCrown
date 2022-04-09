@@ -187,6 +187,11 @@ namespace HotelCrown.Forms
                 MessageBox.Show("Please select the customer to be edited!");
                 return;
             }
+            else if ((chbMan.Checked = true) && (chbWomen.Checked = true))
+            {
+                MessageBox.Show("Please choose one gender!");
+                return;
+            }
             else
             {
                 Customer customer = new Customer()

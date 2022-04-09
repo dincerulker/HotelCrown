@@ -114,6 +114,7 @@ namespace HotelCrown.Forms
             if (dgvRooms.SelectedRows.Count == -1)
             {
                 MessageBox.Show("Please select the room to be deleted!");
+                return;
             }
             else
             {

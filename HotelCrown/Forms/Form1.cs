@@ -45,5 +45,11 @@ namespace HotelCrown
             Customers customers = new Customers(db);
             customers.ShowDialog();
         }
+
+        private void tsmFeatures_Click(object sender, EventArgs e)
+        {
+            Features features = new Features(db);
+            features.ShowDialog();
+        }
     }
 }

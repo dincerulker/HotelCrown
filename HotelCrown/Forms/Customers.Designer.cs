@@ -39,17 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.gboNewCustomer = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
+            this.chbWomen = new System.Windows.Forms.CheckBox();
+            this.chbMan = new System.Windows.Forms.CheckBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.txtIdNumber = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAdditionalInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtAdditionalInfo = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtIdNumber = new System.Windows.Forms.TextBox();
-            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.chbMan = new System.Windows.Forms.CheckBox();
-            this.chbWomen = new System.Windows.Forms.CheckBox();
-            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.gboNewCustomer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
@@ -185,15 +185,69 @@
             this.gboNewCustomer.TabStop = false;
             this.gboNewCustomer.Text = "New Customer";
             // 
-            // groupBox1
+            // txtPhone
             // 
-            this.groupBox1.Controls.Add(this.dgvCustomers);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(610, 484);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customers";
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPhone.Location = new System.Drawing.Point(169, 98);
+            this.txtPhone.Mask = "(999) 000-0000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(188, 29);
+            this.txtPhone.TabIndex = 5;
+            // 
+            // chbWomen
+            // 
+            this.chbWomen.AutoSize = true;
+            this.chbWomen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chbWomen.Location = new System.Drawing.Point(261, 173);
+            this.chbWomen.Name = "chbWomen";
+            this.chbWomen.Size = new System.Drawing.Size(96, 28);
+            this.chbWomen.TabIndex = 4;
+            this.chbWomen.Text = "Women";
+            this.chbWomen.UseVisualStyleBackColor = true;
+            // 
+            // chbMan
+            // 
+            this.chbMan.AutoSize = true;
+            this.chbMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chbMan.Location = new System.Drawing.Point(169, 173);
+            this.chbMan.Name = "chbMan";
+            this.chbMan.Size = new System.Drawing.Size(66, 28);
+            this.chbMan.TabIndex = 4;
+            this.chbMan.Text = "Man";
+            this.chbMan.UseVisualStyleBackColor = true;
+            // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpBirthDate.Location = new System.Drawing.Point(189, 132);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(168, 29);
+            this.dtpBirthDate.TabIndex = 3;
+            // 
+            // txtIdNumber
+            // 
+            this.txtIdNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtIdNumber.Location = new System.Drawing.Point(169, 62);
+            this.txtIdNumber.Name = "txtIdNumber";
+            this.txtIdNumber.Size = new System.Drawing.Size(188, 29);
+            this.txtIdNumber.TabIndex = 2;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtName.Location = new System.Drawing.Point(169, 23);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 29);
+            this.txtName.TabIndex = 2;
+            // 
+            // txtAdditionalInfo
+            // 
+            this.txtAdditionalInfo.Location = new System.Drawing.Point(6, 230);
+            this.txtAdditionalInfo.Multiline = true;
+            this.txtAdditionalInfo.Name = "txtAdditionalInfo";
+            this.txtAdditionalInfo.Size = new System.Drawing.Size(351, 238);
+            this.txtAdditionalInfo.TabIndex = 1;
             // 
             // label5
             // 
@@ -217,13 +271,15 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Additional Information";
             // 
-            // txtAdditionalInfo
+            // groupBox1
             // 
-            this.txtAdditionalInfo.Location = new System.Drawing.Point(6, 230);
-            this.txtAdditionalInfo.Multiline = true;
-            this.txtAdditionalInfo.Name = "txtAdditionalInfo";
-            this.txtAdditionalInfo.Size = new System.Drawing.Size(351, 238);
-            this.txtAdditionalInfo.TabIndex = 1;
+            this.groupBox1.Controls.Add(this.dgvCustomers);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(610, 484);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Customers";
             // 
             // dgvCustomers
             // 
@@ -241,62 +297,6 @@
             this.dgvCustomers.Size = new System.Drawing.Size(597, 458);
             this.dgvCustomers.TabIndex = 0;
             // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtName.Location = new System.Drawing.Point(169, 23);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(188, 29);
-            this.txtName.TabIndex = 2;
-            // 
-            // txtIdNumber
-            // 
-            this.txtIdNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtIdNumber.Location = new System.Drawing.Point(169, 62);
-            this.txtIdNumber.Name = "txtIdNumber";
-            this.txtIdNumber.Size = new System.Drawing.Size(188, 29);
-            this.txtIdNumber.TabIndex = 2;
-            // 
-            // dtpBirthDate
-            // 
-            this.dtpBirthDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpBirthDate.Location = new System.Drawing.Point(189, 132);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(168, 29);
-            this.dtpBirthDate.TabIndex = 3;
-            // 
-            // chbMan
-            // 
-            this.chbMan.AutoSize = true;
-            this.chbMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chbMan.Location = new System.Drawing.Point(169, 173);
-            this.chbMan.Name = "chbMan";
-            this.chbMan.Size = new System.Drawing.Size(66, 28);
-            this.chbMan.TabIndex = 4;
-            this.chbMan.Text = "Man";
-            this.chbMan.UseVisualStyleBackColor = true;
-            // 
-            // chbWomen
-            // 
-            this.chbWomen.AutoSize = true;
-            this.chbWomen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chbWomen.Location = new System.Drawing.Point(261, 173);
-            this.chbWomen.Name = "chbWomen";
-            this.chbWomen.Size = new System.Drawing.Size(96, 28);
-            this.chbWomen.TabIndex = 4;
-            this.chbWomen.Text = "Women";
-            this.chbWomen.UseVisualStyleBackColor = true;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPhone.Location = new System.Drawing.Point(169, 98);
-            this.txtPhone.Mask = "(999) 000-0000";
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(188, 29);
-            this.txtPhone.TabIndex = 5;
-            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +310,9 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gboNewCustomer);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1020, 591);
+            this.MinimumSize = new System.Drawing.Size(1020, 591);
             this.Name = "Customers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customers";

@@ -30,6 +30,11 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboNewRoom = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lstRoomFeatures = new System.Windows.Forms.ListBox();
@@ -47,10 +52,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnAddRoom = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.gboNewRoom.SuspendLayout();
@@ -65,7 +66,7 @@
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(610, 484);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rooms";
             // 
@@ -80,7 +81,8 @@
             this.Column5,
             this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.Column1});
             this.dgvRooms.Location = new System.Drawing.Point(6, 26);
             this.dgvRooms.MultiSelect = false;
             this.dgvRooms.Name = "dgvRooms";
@@ -89,6 +91,45 @@
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRooms.Size = new System.Drawing.Size(598, 452);
             this.dgvRooms.TabIndex = 0;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "RoomNumber";
+            this.Column5.FillWeight = 120F;
+            this.Column5.HeaderText = "Room Number";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "RoomName";
+            this.Column2.FillWeight = 170F;
+            this.Column2.HeaderText = "Room Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Capacity";
+            this.Column3.FillWeight = 85F;
+            this.Column3.HeaderText = "Capacity";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Price";
+            this.Column4.HeaderText = "Price";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // gboNewRoom
             // 
@@ -128,14 +169,14 @@
             this.lstRoomFeatures.Name = "lstRoomFeatures";
             this.lstRoomFeatures.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lstRoomFeatures.Size = new System.Drawing.Size(275, 238);
-            this.lstRoomFeatures.TabIndex = 3;
+            this.lstRoomFeatures.TabIndex = 4;
             // 
             // txtRoomName
             // 
             this.txtRoomName.Location = new System.Drawing.Point(147, 61);
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(145, 27);
-            this.txtRoomName.TabIndex = 2;
+            this.txtRoomName.TabIndex = 1;
             this.txtRoomName.Text = "Standart";
             this.txtRoomName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -150,7 +191,7 @@
             0});
             this.nudNightlyRate.Name = "nudNightlyRate";
             this.nudNightlyRate.Size = new System.Drawing.Size(145, 27);
-            this.nudNightlyRate.TabIndex = 1;
+            this.nudNightlyRate.TabIndex = 3;
             this.nudNightlyRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudNightlyRate.Value = new decimal(new int[] {
             100,
@@ -164,7 +205,7 @@
             this.nudCapacity.Margin = new System.Windows.Forms.Padding(10);
             this.nudCapacity.Name = "nudCapacity";
             this.nudCapacity.Size = new System.Drawing.Size(145, 27);
-            this.nudCapacity.TabIndex = 1;
+            this.nudCapacity.TabIndex = 2;
             this.nudCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudCapacity.Value = new decimal(new int[] {
             1,
@@ -183,7 +224,7 @@
             0});
             this.nudRoomNo.Name = "nudRoomNo";
             this.nudRoomNo.Size = new System.Drawing.Size(145, 27);
-            this.nudRoomNo.TabIndex = 1;
+            this.nudRoomNo.TabIndex = 0;
             this.nudRoomNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudRoomNo.Value = new decimal(new int[] {
             1,
@@ -240,7 +281,7 @@
             this.btnEdit.Location = new System.Drawing.Point(13, 503);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(115, 41);
-            this.btnEdit.TabIndex = 2;
+            this.btnEdit.TabIndex = 0;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -250,7 +291,7 @@
             this.btnDelete.Location = new System.Drawing.Point(134, 503);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 41);
-            this.btnDelete.TabIndex = 2;
+            this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -261,7 +302,7 @@
             this.btnCancel.Location = new System.Drawing.Point(820, 503);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(115, 41);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -293,41 +334,10 @@
             this.btnSave.Location = new System.Drawing.Point(699, 503);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 41);
-            this.btnSave.TabIndex = 2;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "RoomNumber";
-            this.Column5.FillWeight = 120F;
-            this.Column5.HeaderText = "Room Number";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "RoomName";
-            this.Column2.FillWeight = 170F;
-            this.Column2.HeaderText = "Room Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Capacity";
-            this.Column3.FillWeight = 85F;
-            this.Column3.HeaderText = "Capacity";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Price";
-            this.Column4.HeaderText = "Price";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // Rooms
             // 
@@ -345,6 +355,9 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(960, 595);
+            this.MinimumSize = new System.Drawing.Size(960, 595);
             this.Name = "Rooms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Rooms";
@@ -384,5 +397,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
