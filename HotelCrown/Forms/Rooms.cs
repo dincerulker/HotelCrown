@@ -19,7 +19,7 @@ namespace HotelCrown.Forms
         public Rooms(HotelCrownContext db)
         {
             InitializeComponent();
-            this.db = db;              
+            this.db = db;
             OdalarıGetir();
             OzellikleriYukle();
         }
@@ -47,6 +47,7 @@ namespace HotelCrown.Forms
             dgvRooms.DataSource = db.Rooms.Select(x => new
             {
                 Id = x.Id,
+                RoomNumber = x.RoomNumber,
                 RoomName = x.RoomName,
                 Capacity = x.Capacity,
                 Price = x.Price,
@@ -84,16 +85,14 @@ namespace HotelCrown.Forms
             }
             else
             {
-                Room newRoom = new Room()
+                db.Rooms.Add(new Room()
                 {
-                    Id = (int)nudRoomNo.Value,
+                    RoomNumber = (int)nudRoomNo.Value,
                     RoomName = txtRoomName.Text.Trim(),
                     Capacity = (int)nudCapacity.Value,
                     Price = (decimal)nudNightlyRate.Value,
                     Features = features,
-                };
-
-                db.Rooms.Add(newRoom);
+                });
                 db.SaveChanges();
                 FormuSifirla();
                 OdalarıGetir();
@@ -161,7 +160,7 @@ namespace HotelCrown.Forms
             {
                 Room newRoom = new Room()
                 {
-                    Id = (int)nudRoomNo.Value,
+                    RoomNumber = (int)nudRoomNo.Value,
                     RoomName = txtRoomName.Text.Trim(),
                     Capacity = (int)nudCapacity.Value,
                     Price = (decimal)nudNightlyRate.Value,

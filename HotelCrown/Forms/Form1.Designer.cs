@@ -135,6 +135,7 @@
             this.tsmCustomers.Name = "tsmCustomers";
             this.tsmCustomers.Size = new System.Drawing.Size(107, 22);
             this.tsmCustomers.Text = "Customers";
+            this.tsmCustomers.Click += new System.EventHandler(this.tsmCustomers_Click);
             // 
             // tsmFeatures
             // 

@@ -134,6 +134,7 @@
                     Gender = Gender.Erkek,
                     PhoneNumber = "+05439765432",
                     BirthDate = new DateTime(1999, 01, 01),
+                    Description = "Deneme"
                 };
 
 

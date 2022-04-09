@@ -17,6 +17,7 @@ namespace HotelCrown.Data
         public string FullName { get; set; }
         [Required]
         public string IdentityNumber { get; set; }
+        [Required]
         public string PhoneNumber { get; set; }
         [Required]
         public DateTime BirthDate { get; set; }

@@ -39,5 +39,11 @@ namespace HotelCrown
             Rooms rooms = new Rooms(db);
             rooms.ShowDialog();
         }
+
+        private void tsmCustomers_Click(object sender, EventArgs e)
+        {
+            Customers customers = new Customers(db);
+            customers.ShowDialog();
+        }
     }
 }

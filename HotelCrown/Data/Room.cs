@@ -14,6 +14,8 @@ namespace HotelCrown.Data
         [Required]
         public string RoomName { get; set; }
         [Required]
+        public int RoomNumber { get; set; }
+        [Required]
         public int Capacity { get; set; }
         [Required]
         public decimal Price { get; set; }
