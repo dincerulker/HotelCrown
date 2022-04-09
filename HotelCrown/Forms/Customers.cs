@@ -75,7 +75,7 @@ namespace HotelCrown.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" && txtIdNumber.Text == "" && txtPhone.Text =="")
+            if (txtName.Text == "" && txtIdNumber.Text == "" && txtPhone.Text == "")
             {
                 MessageBox.Show("Please add customer's information");
                 return;
@@ -86,6 +86,11 @@ namespace HotelCrown.Forms
                 MessageBox.Show("Please enter only numbers in the ID field.");
                 txtIdNumber.Text = txtIdNumber.Text.Remove(txtIdNumber.Text.Length - 1);
                 return;
+            }
+            else if ((chbMan.Checked = true) && (chbWomen.Checked = true))
+            {
+                MessageBox.Show("Please choose one gender!");
+                return ;
             }
             else
             {
@@ -112,11 +117,11 @@ namespace HotelCrown.Forms
         {
             if (chbMan.Checked)
             {
-                gender = Gender.Erkek;
+                gender = Gender.Erkek;                
             }
             else
             {
-                gender = Gender.Kadın;
+                gender = Gender.Kadın;                
             }
         }
 
@@ -138,14 +143,68 @@ namespace HotelCrown.Forms
                 }
                 db.SaveChanges();
                 LoadCustomers();
+                
             }
-            
+
         }
 
         private void SelectedCustomer()
         {
             string selectedCustomer = dgvCustomers.SelectedRows[0].Cells[0].Value.ToString();
             customer = db.Customers.FirstOrDefault(c => c.FullName == selectedCustomer);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            SelectedCustomer();
+            gboNewCustomer.Enabled = true;
+            btnSave.Visible = true;
+            btnAdd.Visible = false;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+            txtName.Text = customer.FullName;
+            txtIdNumber.Text = customer.IdentityNumber;
+            txtPhone.Text = customer.PhoneNumber;
+            dtpBirthDate.Value = customer.BirthDate;
+            txtAdditionalInfo.Text = customer.Description;
+            if (chbMan.Checked)
+            {
+                gender = customer.Gender;
+            }
+            else
+            {
+                gender = customer.Gender;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SelectedCustomer();
+            LoadGenders();
+            db.Customers.Remove(customer);
+            if (dgvCustomers.SelectedRows.Count == -1)
+            {
+                MessageBox.Show("Please select the customer to be edited!");
+                return;
+            }
+            else
+            {
+                Customer customer = new Customer()
+                {
+                    IdentityNumber = txtIdNumber.Text,
+                    FullName = txtName.Text,
+                    PhoneNumber = txtPhone.Text,
+                    BirthDate = dtpBirthDate.Value,
+                    Description = txtAdditionalInfo.Text,
+                    Gender = gender,
+                };
+
+                db.Customers.Add(customer);
+            }
+            db.SaveChanges();
+            LoadCustomers();
+            ResetGroupBox();
+            Cancelation();
         }
     }
 }

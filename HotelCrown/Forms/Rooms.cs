@@ -150,11 +150,12 @@ namespace HotelCrown.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            db.Rooms.Remove(room);
             SelectedRoom();
+            db.Rooms.Remove(room);
             if (dgvRooms.SelectedRows.Count == -1)
             {
                 MessageBox.Show("Please select the room to be edited!");
+                return;
             }
             else
             {
