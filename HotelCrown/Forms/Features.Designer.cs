@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Features));
             this.dgvFeatures = new System.Windows.Forms.DataGridView();
             this.txtFeature = new System.Windows.Forms.TextBox();
             this.gboNewFeature = new System.Windows.Forms.GroupBox();
@@ -212,6 +213,7 @@
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gboNewFeature);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(586, 456);
             this.MinimumSize = new System.Drawing.Size(586, 456);
