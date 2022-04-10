@@ -52,7 +52,7 @@ namespace HotelCrown.Forms
             db.Features.Remove(feature);
             if (dgvFeatures.SelectedRows.Count == -1)
             {
-                MessageBox.Show("Please select the room to be edited!");
+                MessageBox.Show("Please select the feature to be edited!");
                 return;
             }
             else
@@ -116,6 +116,7 @@ namespace HotelCrown.Forms
             btnSave.Visible = false;
             btnNew.Enabled = false;
             btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

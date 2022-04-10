@@ -125,6 +125,9 @@
     <EmbeddedResource Include="Forms\Rooms.resx">
       <DependentUpon>Rooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204061416201_Ilk.resx">
       <DependentUpon>202204061416201_Ilk.cs</DependentUpon>
     </EmbeddedResource>

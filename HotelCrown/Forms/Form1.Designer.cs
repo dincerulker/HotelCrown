@@ -150,6 +150,7 @@
             this.tsmServices.Name = "tsmServices";
             this.tsmServices.Size = new System.Drawing.Size(87, 22);
             this.tsmServices.Text = "Services";
+            this.tsmServices.Click += new System.EventHandler(this.tsmServices_Click);
             // 
             // pictureBox1
             // 
