@@ -123,12 +123,12 @@ namespace HotelCrown.Forms
             if (chbMan.Checked)
             {
                 gender = Gender.Erkek;
-                chbWomen.Checked = false;
+                
             }
             else
             {
                 gender = Gender.Kadın;
-                chbMan.Checked = false;
+                
             }
         }
 
