@@ -15,7 +15,7 @@ namespace HotelCrown
     public partial class Form1 : Form
     {
         HotelCrownContext db = new HotelCrownContext();
-        
+        Reservation reservation;
         public Form1()
         {
             InitializeComponent();
@@ -64,13 +64,27 @@ namespace HotelCrown
         private void btnNewReservation_Click(object sender, EventArgs e)
         {
             Reservations reservations = new Reservations(db);
-            reservations.NewReservation += Reservations_NewReservation;
+            
             reservations.ShowDialog();
         }
 
-        private void Reservations_NewReservation(object sender, EventArgs e)
+        
+        private void btnDeleteReservation_Click(object sender, EventArgs e)
         {
-            dgvReservations.DataSource = db.Reservations.ToList();
+            
+            int index = dgvReservations.SelectedRows[0].Index;
+            string selectedReservation = dgvReservations.SelectedRows[0].Cells[0].Value.ToString();
+            reservation = db.Reservations.FirstOrDefault(c => c.RoomName == selectedReservation);
+            db.Reservations.Remove(reservation);
+            db.SaveChanges();
+            VerileriYukle();
+            if (dgvReservations.SelectedRows.Count < 1)
+                return;
+            else if (index > dgvReservations.Rows.Count - 1)
+                dgvReservations.Rows[index - 1].Selected = true;
+            else
+                dgvReservations.Rows[index].Selected = true;
+
         }
     }
 }

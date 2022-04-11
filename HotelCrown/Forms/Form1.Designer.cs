@@ -98,6 +98,7 @@
             this.btnDeleteReservation.TabIndex = 2;
             this.btnDeleteReservation.Text = "Delete Reservation";
             this.btnDeleteReservation.UseVisualStyleBackColor = true;
+            this.btnDeleteReservation.Click += new System.EventHandler(this.btnDeleteReservation_Click);
             // 
             // label1
             // 
