@@ -15,7 +15,7 @@ namespace HotelCrown.Data
         [Required]
         public int RoomId { get; set; }
         [Required]
-        public int RoomNumber { get; set; }
+        public string RoomName { get; set; }
         [Required]
         public DateTime? CheckInDate { get; set; }
         [Required]
@@ -23,7 +23,7 @@ namespace HotelCrown.Data
         public DateTime? CheckedInTime { get; set; }
         public DateTime? CheckedOutTime { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
-        public virtual ICollection<ReservationService> ReservationServices { get; set; }
+        public virtual ICollection<Service> Services { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }
     }
 }

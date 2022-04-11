@@ -73,6 +73,7 @@
             this.btnNewReservation.TabIndex = 2;
             this.btnNewReservation.Text = "New Reservation";
             this.btnNewReservation.UseVisualStyleBackColor = true;
+            this.btnNewReservation.Click += new System.EventHandler(this.btnNewReservation_Click);
             // 
             // btnEditReservation
             // 

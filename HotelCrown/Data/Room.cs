@@ -9,7 +9,10 @@ namespace HotelCrown.Data
 {
     public class Room
     {
-
+        public Room()
+        {           
+            Customers = new HashSet<Customer>();
+        }
         public int Id { get; set; }
         [Required]
         public string RoomName { get; set; }
@@ -21,5 +24,6 @@ namespace HotelCrown.Data
         public decimal Price { get; set; }
         public virtual ICollection<Feature> Features { get; set; }
         public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
     }
 }

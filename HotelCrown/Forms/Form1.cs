@@ -15,7 +15,7 @@ namespace HotelCrown
     public partial class Form1 : Form
     {
         HotelCrownContext db = new HotelCrownContext();
-        Reservation reservation;
+        
         public Form1()
         {
             InitializeComponent();
@@ -24,12 +24,15 @@ namespace HotelCrown
 
         private void VerileriYukle()
         {
+            
             dgvReservations.DataSource = db.Reservations.Select(x => new
-            {
-                Id = x.Id,
+            {                               
+                RoomName = x.RoomName,
                 RoomId = x.RoomId,
                 CheckInDate = x.CheckInDate,
                 CheckOutDate = x.CheckOutDate,
+                CheckedInTime = x.CheckedInTime,
+                CheckedOutTime = x.CheckedOutTime,
 
             }).ToList();
         }
@@ -56,6 +59,18 @@ namespace HotelCrown
         {
             Services services = new Services(db);
             services.ShowDialog();
+        }
+
+        private void btnNewReservation_Click(object sender, EventArgs e)
+        {
+            Reservations reservations = new Reservations(db);
+            reservations.NewReservation += Reservations_NewReservation;
+            reservations.ShowDialog();
+        }
+
+        private void Reservations_NewReservation(object sender, EventArgs e)
+        {
+            dgvReservations.DataSource = db.Reservations.ToList();
         }
     }
 }
