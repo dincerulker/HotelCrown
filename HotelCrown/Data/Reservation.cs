@@ -17,11 +17,11 @@ namespace HotelCrown.Data
         [Required]
         public int RoomNumber { get; set; }
         [Required]
-        public DateTime CheckInDate { get; set; }
+        public DateTime? CheckInDate { get; set; }
         [Required]
-        public DateTime CheckOutDate { get; set; }
-        public DateTime CheckedInTime { get; set; }
-        public DateTime CheckedOutTime { get; set; }
+        public DateTime? CheckOutDate { get; set; }
+        public DateTime? CheckedInTime { get; set; }
+        public DateTime? CheckedOutTime { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<ReservationService> ReservationServices { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }

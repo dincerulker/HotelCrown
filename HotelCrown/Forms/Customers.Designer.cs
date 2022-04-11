@@ -221,9 +221,9 @@
             // 
             this.dtpBirthDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpBirthDate.Location = new System.Drawing.Point(189, 132);
+            this.dtpBirthDate.Location = new System.Drawing.Point(191, 132);
             this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(168, 29);
+            this.dtpBirthDate.Size = new System.Drawing.Size(166, 29);
             this.dtpBirthDate.TabIndex = 3;
             // 
             // txtIdNumber

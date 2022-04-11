@@ -60,6 +60,8 @@ namespace HotelCrown.Forms
             btnCancel.Enabled = false;
             btnSave.Visible = false;
             btnAdd.Visible = true;
+            chbMan.Checked = false;
+            chbWomen.Checked = false;
         }
 
         private void ResetGroupBox()
@@ -69,12 +71,14 @@ namespace HotelCrown.Forms
             txtPhone.Text = "";
             txtAdditionalInfo.Text = "";
             dtpBirthDate.Value = DateTime.Now;
-            chbMan.Checked = false;
-            chbWomen.Checked = false;
+            //chbMan.Checked = false;
+            //chbWomen.Checked = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            LoadGenders();
+            
             if (txtName.Text == "" && txtIdNumber.Text == "" && txtPhone.Text == "")
             {
                 MessageBox.Show("Please add customer's information");
@@ -87,15 +91,13 @@ namespace HotelCrown.Forms
                 txtIdNumber.Text = txtIdNumber.Text.Remove(txtIdNumber.Text.Length - 1);
                 return;
             }
-            else if ((chbMan.Checked = true) && (chbWomen.Checked = true))
+            else if ((chbMan.Checked) && (chbWomen.Checked))
             {
                 MessageBox.Show("Please choose one gender!");
                 return ;
             }
             else
             {
-                LoadGenders();
-
                 Customer customer = new Customer()
                 {
                     FullName = txtName.Text,
@@ -104,8 +106,11 @@ namespace HotelCrown.Forms
                     BirthDate = dtpBirthDate.Value,
                     Gender = gender,
                     Description = txtAdditionalInfo.Text
-
                 };
+                if (chbMan.Checked)
+                {
+                    chbWomen.Checked = false;
+                }
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 ResetGroupBox();
@@ -117,11 +122,13 @@ namespace HotelCrown.Forms
         {
             if (chbMan.Checked)
             {
-                gender = Gender.Erkek;                
+                gender = Gender.Erkek;
+                chbWomen.Checked = false;
             }
             else
             {
-                gender = Gender.Kadın;                
+                gender = Gender.Kadın;
+                chbMan.Checked = false;
             }
         }
 
@@ -162,6 +169,8 @@ namespace HotelCrown.Forms
             btnAdd.Visible = false;
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
+            chbWomen.Checked = false;
+            chbMan.Checked = false;
             txtName.Text = customer.FullName;
             txtIdNumber.Text = customer.IdentityNumber;
             txtPhone.Text = customer.PhoneNumber;
@@ -187,7 +196,8 @@ namespace HotelCrown.Forms
                 MessageBox.Show("Please select the customer to be edited!");
                 return;
             }
-            else if ((chbMan.Checked = true) && (chbWomen.Checked = true))
+
+            else if ((chbMan.Checked) && (chbWomen.Checked))
             {
                 MessageBox.Show("Please choose one gender!");
                 return;

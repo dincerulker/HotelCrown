@@ -85,6 +85,12 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservations.Designer.cs">
+      <DependentUpon>Reservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Rooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,10 @@
     <Compile Include="Migrations\202204091231130_Mig1.designer.cs">
       <DependentUpon>202204091231130_Mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204111127245_Mig2.cs" />
+    <Compile Include="Migrations\202204111127245_Mig2.designer.cs">
+      <DependentUpon>202204111127245_Mig2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservations.resx">
+      <DependentUpon>Reservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Rooms.resx">
       <DependentUpon>Rooms.cs</DependentUpon>
@@ -136,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204091231130_Mig1.resx">
       <DependentUpon>202204091231130_Mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204111127245_Mig2.resx">
+      <DependentUpon>202204111127245_Mig2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

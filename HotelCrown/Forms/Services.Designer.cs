@@ -256,6 +256,7 @@
             this.MaximumSize = new System.Drawing.Size(745, 467);
             this.MinimumSize = new System.Drawing.Size(745, 467);
             this.Name = "Services";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Services";
             this.gboNewService.ResumeLayout(false);
             this.gboNewService.PerformLayout();
