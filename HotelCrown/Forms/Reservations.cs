@@ -95,6 +95,7 @@ namespace HotelCrown.Forms
                 db.SaveChanges();
             }
             LoadObjects();
+            Close();
            
         }
 
