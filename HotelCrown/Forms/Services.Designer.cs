@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Services));
             this.txtService = new System.Windows.Forms.TextBox();
             this.gboNewService = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nudUnitPrice = new System.Windows.Forms.NumericUpDown();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -44,12 +46,11 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nudUnitPrice = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.gboNewService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // txtService
@@ -76,6 +77,30 @@
             this.gboNewService.TabIndex = 5;
             this.gboNewService.TabStop = false;
             this.gboNewService.Text = "New Service :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(6, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 24);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Unit Price :";
+            // 
+            // nudUnitPrice
+            // 
+            this.nudUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nudUnitPrice.Location = new System.Drawing.Point(112, 89);
+            this.nudUnitPrice.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.nudUnitPrice.Name = "nudUnitPrice";
+            this.nudUnitPrice.Size = new System.Drawing.Size(152, 29);
+            this.nudUnitPrice.TabIndex = 5;
+            this.nudUnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnCancel
             // 
@@ -216,29 +241,15 @@
             this.Column4.ReadOnly = true;
             this.Column4.Visible = false;
             // 
-            // nudUnitPrice
+            // label3
             // 
-            this.nudUnitPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.nudUnitPrice.Location = new System.Drawing.Point(112, 89);
-            this.nudUnitPrice.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.nudUnitPrice.Name = "nudUnitPrice";
-            this.nudUnitPrice.Size = new System.Drawing.Size(152, 29);
-            this.nudUnitPrice.TabIndex = 5;
-            this.nudUnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(6, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Unit Price :";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(639, 409);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 10);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "copyright by ulker";
             // 
             // Services
             // 
@@ -246,6 +257,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(729, 428);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.gboNewService);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -260,10 +272,11 @@
             this.Text = "Services";
             this.gboNewService.ResumeLayout(false);
             this.gboNewService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,5 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudUnitPrice;
+        private System.Windows.Forms.Label label3;
     }
 }

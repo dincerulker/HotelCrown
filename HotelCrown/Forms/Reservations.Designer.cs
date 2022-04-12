@@ -40,6 +40,7 @@
             this.lstRooms = new System.Windows.Forms.ListBox();
             this.lstServices = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpCheckInDate
@@ -138,12 +139,23 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Services";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(7, 515);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 10);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "copyright by ulker";
+            // 
             // Reservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(824, 534);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lstServices);
             this.Controls.Add(this.lstRooms);
             this.Controls.Add(this.lstCustomers);
@@ -159,7 +171,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(566, 573);
+            this.MaximumSize = new System.Drawing.Size(840, 573);
+            this.MinimumSize = new System.Drawing.Size(840, 573);
             this.Name = "Reservations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reservations";
@@ -180,5 +193,6 @@
         private System.Windows.Forms.ListBox lstRooms;
         private System.Windows.Forms.ListBox lstServices;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

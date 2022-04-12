@@ -51,6 +51,7 @@
             this.cbRefresh = new System.Windows.Forms.CheckBox();
             this.nudServiceQuantity = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudServiceQuantity)).BeginInit();
             this.SuspendLayout();
@@ -253,12 +254,23 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Service Quantitiy";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(981, 421);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 10);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "copyright by ulker";
+            // 
             // EditReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1071, 440);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.nudServiceQuantity);
             this.Controls.Add(this.cboRooms);
             this.Controls.Add(this.btnCancel);
@@ -284,7 +296,11 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1087, 479);
+            this.MinimumSize = new System.Drawing.Size(1087, 479);
             this.Name = "EditReservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Reservation";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudServiceQuantity)).EndInit();
@@ -317,5 +333,6 @@
         private System.Windows.Forms.CheckBox cbRefresh;
         private System.Windows.Forms.NumericUpDown nudServiceQuantity;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
