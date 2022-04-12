@@ -73,6 +73,12 @@
     <Compile Include="Forms\Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditReservation.Designer.cs">
+      <DependentUpon>EditReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Features.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Strategies\DbStrategie.cs" />
     <EmbeddedResource Include="Forms\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditReservation.resx">
+      <DependentUpon>EditReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Features.resx">
       <DependentUpon>Features.cs</DependentUpon>

@@ -87,6 +87,7 @@
             this.btnEditReservation.TabIndex = 2;
             this.btnEditReservation.Text = "Edit Reservation";
             this.btnEditReservation.UseVisualStyleBackColor = true;
+            this.btnEditReservation.Click += new System.EventHandler(this.btnEditReservation_Click);
             // 
             // btnDeleteReservation
             // 

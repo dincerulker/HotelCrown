@@ -75,6 +75,7 @@ namespace HotelCrown.Forms
             btnSave.Visible = false;
             btnNew.Enabled = true;
             btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
             txtFeature.Text = "";
         }
 

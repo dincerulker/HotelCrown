@@ -88,5 +88,11 @@ namespace HotelCrown
             this.Refresh();
             VerileriYukle();
         }
+
+        private void btnEditReservation_Click(object sender, EventArgs e)
+        {
+            EditReservation editReservation = new EditReservation(db);
+            editReservation.ShowDialog();   
+        }
     }
 }
