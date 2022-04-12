@@ -37,7 +37,7 @@ namespace HotelCrown.Forms
             btnDelete.Enabled = false;
             txtFeature.Text = feature.FeatureName;
         }
-        
+
 
 
         private void SelectedFeature()
@@ -121,7 +121,7 @@ namespace HotelCrown.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            SelectedFeature();
+            //SelectedFeature();
             
             if (txtFeature.Text == "")
             {

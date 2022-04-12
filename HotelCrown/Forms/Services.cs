@@ -87,7 +87,7 @@ namespace HotelCrown.Forms
             }
             else
             {
-                SelectedService();
+                //SelectedService();
                 DialogResult dr = MessageBox.Show
                     (
                         $"Selected service will be deleted permenantly.Do you want to continue?",
@@ -121,7 +121,7 @@ namespace HotelCrown.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            SelectedService();
+            //SelectedService();
             if (txtService.Text == "")
             {
                 MessageBox.Show("Please enter a new feature.");

@@ -40,6 +40,7 @@
             this.tsmFeatures = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmServices = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,12 +166,23 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1043, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Refresh Page";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1153, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeleteReservation);
             this.Controls.Add(this.btnEditReservation);
@@ -207,6 +219,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmCustomers;
         private System.Windows.Forms.ToolStripMenuItem tsmFeatures;
         private System.Windows.Forms.ToolStripMenuItem tsmServices;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -64,27 +64,29 @@ namespace HotelCrown
         private void btnNewReservation_Click(object sender, EventArgs e)
         {
             Reservations reservations = new Reservations(db);
-            
+            reservations.ReservationChanged += Reservations_ReservationChanged;
             reservations.ShowDialog();
         }
 
-        
+        private void Reservations_ReservationChanged(object sender, EventArgs e)
+        {
+            VerileriYukle();
+        }
+
         private void btnDeleteReservation_Click(object sender, EventArgs e)
         {
-            
-            int index = dgvReservations.SelectedRows[0].Index;
             string selectedReservation = dgvReservations.SelectedRows[0].Cells[0].Value.ToString();
             reservation = db.Reservations.FirstOrDefault(c => c.RoomName == selectedReservation);
             db.Reservations.Remove(reservation);
             db.SaveChanges();
             VerileriYukle();
-            if (dgvReservations.SelectedRows.Count < 1)
-                return;
-            else if (index > dgvReservations.Rows.Count - 1)
-                dgvReservations.Rows[index - 1].Selected = true;
-            else
-                dgvReservations.Rows[index].Selected = true;
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+            VerileriYukle();
         }
     }
 }

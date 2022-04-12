@@ -38,23 +38,20 @@
             this.btnAddReservation = new System.Windows.Forms.Button();
             this.lstCustomers = new System.Windows.Forms.ListBox();
             this.lstRooms = new System.Windows.Forms.ListBox();
-            this.btnMatch = new System.Windows.Forms.Button();
-            this.btnUnMatch = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.lstServices = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpCheckInDate
             // 
-            this.dtpCheckInDate.Location = new System.Drawing.Point(391, 504);
+            this.dtpCheckInDate.Location = new System.Drawing.Point(394, 406);
             this.dtpCheckInDate.Name = "dtpCheckInDate";
             this.dtpCheckInDate.Size = new System.Drawing.Size(297, 29);
             this.dtpCheckInDate.TabIndex = 1;
             // 
             // dtpCheckOutDate
             // 
-            this.dtpCheckOutDate.Location = new System.Drawing.Point(391, 539);
+            this.dtpCheckOutDate.Location = new System.Drawing.Point(394, 441);
             this.dtpCheckOutDate.Name = "dtpCheckOutDate";
             this.dtpCheckOutDate.Size = new System.Drawing.Size(297, 29);
             this.dtpCheckOutDate.TabIndex = 1;
@@ -80,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(159, 508);
+            this.label3.Location = new System.Drawing.Point(162, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 24);
             this.label3.TabIndex = 2;
@@ -89,7 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(159, 543);
+            this.label4.Location = new System.Drawing.Point(162, 445);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 24);
             this.label4.TabIndex = 2;
@@ -97,7 +94,7 @@
             // 
             // btnAddReservation
             // 
-            this.btnAddReservation.Location = new System.Drawing.Point(468, 574);
+            this.btnAddReservation.Location = new System.Drawing.Point(471, 476);
             this.btnAddReservation.Name = "btnAddReservation";
             this.btnAddReservation.Size = new System.Drawing.Size(220, 40);
             this.btnAddReservation.TabIndex = 3;
@@ -123,33 +120,6 @@
             this.lstRooms.Size = new System.Drawing.Size(262, 364);
             this.lstRooms.TabIndex = 4;
             // 
-            // btnMatch
-            // 
-            this.btnMatch.Location = new System.Drawing.Point(156, 430);
-            this.btnMatch.Name = "btnMatch";
-            this.btnMatch.Size = new System.Drawing.Size(262, 42);
-            this.btnMatch.TabIndex = 5;
-            this.btnMatch.Text = "Match Room/Customer";
-            this.btnMatch.UseVisualStyleBackColor = true;
-            // 
-            // btnUnMatch
-            // 
-            this.btnUnMatch.Location = new System.Drawing.Point(428, 430);
-            this.btnUnMatch.Name = "btnUnMatch";
-            this.btnUnMatch.Size = new System.Drawing.Size(262, 42);
-            this.btnUnMatch.TabIndex = 5;
-            this.btnUnMatch.Text = "Un-Match Room/Customer";
-            this.btnUnMatch.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(238, 403);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(373, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Match a customer and a room by choosing.";
-            // 
             // lstServices
             // 
             this.lstServices.FormattingEnabled = true;
@@ -173,10 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(829, 622);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnUnMatch);
-            this.Controls.Add(this.btnMatch);
+            this.ClientSize = new System.Drawing.Size(824, 534);
             this.Controls.Add(this.lstServices);
             this.Controls.Add(this.lstRooms);
             this.Controls.Add(this.lstCustomers);
@@ -194,6 +161,7 @@
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(566, 573);
             this.Name = "Reservations";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reservations";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -210,9 +178,6 @@
         private System.Windows.Forms.Button btnAddReservation;
         private System.Windows.Forms.ListBox lstCustomers;
         private System.Windows.Forms.ListBox lstRooms;
-        private System.Windows.Forms.Button btnMatch;
-        private System.Windows.Forms.Button btnUnMatch;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox lstServices;
         private System.Windows.Forms.Label label6;
     }

@@ -17,7 +17,7 @@ namespace HotelCrown.Forms
         List<Room> rooms = new List<Room>();
         List<Customer> customers = new List<Customer>();
         List<Service> services = new List<Service>();
-        public event EventHandler NewReservation;
+        public event EventHandler ReservationChanged;
 
         public Reservations(HotelCrownContext db)
         {
@@ -77,12 +77,7 @@ namespace HotelCrown.Forms
                 MessageBox.Show("Check-In Date must be earlier then Check-Out Date");
                 return;
             }
-            //if (room.Capacity < room.Reservations.Count())
-            //{
-            //    MessageBox.Show("Room capacity is full, please select another room.");
-            //    return ;
-            //}
-            LoadObjects();
+            
             Reservation reservation = new Reservation()
             {
                 Customers = customers,
@@ -94,16 +89,13 @@ namespace HotelCrown.Forms
                 RoomId = room.RoomNumber,
                 
             };
-            //reservation.CheckInDate = dtpCheckInDate.Value;
-            //reservation.CheckOutDate = dtpCheckOutDate.Value;
-            //reservation.RoomName = room.RoomName;
-            //room.Reservations.Add(reservation);
-
             if (availableRooms.Contains(room))
             {
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
             }
+            LoadObjects();
+           
         }
 
         private void LoadObjects()

@@ -7,13 +7,13 @@ namespace HotelCrown.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Uc : IMigrationMetadata
+    public sealed partial class mig1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Uc));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(mig1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202204091052556_Uc"; }
+            get { return "202204120009313_mig1"; }
         }
         
         string IMigrationMetadata.Source
